@@ -2,8 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Box, Container, AppBar, Grid } from '@mui/material';
-import catForm from './RandomCatForm';
-import catList from './RandomCatList';
+import catForm from './components/RandomCatForm';
+import catList from './components/RandomCatList';
+import CatImage from './components/RandomCatImage';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         {catForm()}
 
         {catList()}
+
+        {CatImage()}
 
       </Container>
 
