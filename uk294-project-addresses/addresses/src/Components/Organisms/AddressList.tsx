@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { address } from "../../Interfaces/AddressInterface";
 import addressService from "../../Service/AddressService";
-import addressCard from "../Molecules/AddressCard";
+import AddressCard2 from "../Molecules/AdressCard";
 
 
 
@@ -10,7 +10,7 @@ export default function AddressList(){
 
     useEffect(() => {
         addressService().getAllAddresses().then((data) => setData(data))
-    }, [])
+    }, )
 
 
     return (
@@ -18,7 +18,7 @@ export default function AddressList(){
             {data?.map((address) =>{
                 return(
                     <div>
-                        {addressCard(address)}
+                        {AddressCard2(address)}
                     </div>
                 )
             })}
