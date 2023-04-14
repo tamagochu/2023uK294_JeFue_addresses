@@ -1,7 +1,7 @@
 import { AxiosInstance } from "axios";
 import { defaultAxiosInstance } from "./Api";
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Implc3NpQGVwaWNtYWlsLmNvbSIsImlhdCI6MTY4MTQ2MTg0MSwiZXhwIjoxNjgxNDY1NDQxLCJzdWIiOiIyIn0.5ReL40sM_g9Ay2HgH95GW5fmYXOhzlKjugHcsGmWn-4'
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Implc3NpQGVwaWNtYWlsLmNvbSIsImlhdCI6MTY4MTQ2NjA0NiwiZXhwIjoxNjgxNDY5NjQ2LCJzdWIiOiIyIn0.svd7R2M4K4lRPZizAG427usJodHhs-MnA4ZcaXoJAyc'
 
 const addressService = (api: AxiosInstance = defaultAxiosInstance) => ({
 
