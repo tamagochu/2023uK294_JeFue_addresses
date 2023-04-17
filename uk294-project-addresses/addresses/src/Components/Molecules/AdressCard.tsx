@@ -7,8 +7,10 @@ import {
     CardActions,
   } from "@mui/material";
   import { address } from "../../Interfaces/AddressInterface";
-  import DeleteIcon from "@mui/icons-material/Delete";
+  
 import { Link, useNavigate } from "react-router-dom";
+import addressService from "../../Service/AddressService";
+import DeleteButton from "./DeleteButton";
 
 
   
@@ -24,20 +26,19 @@ import { Link, useNavigate } from "react-router-dom";
           console.log("hiiiiiiiii")
       }*/
       
+      
     return (
       <Card variant="outlined" sx={{ display: "flex", flexDirection: "column" }}>
         <CardActionArea>
             <CardContent>
-              <p>{myAddress.id}</p>
-              <p>{myAddress.street_name}</p>
-              <p>{myAddress.importdate}</p>
+              <p>ID: {myAddress.id}</p>
+              <p>Street name: {myAddress.street_name}</p>
+              <p>Import Date: {myAddress.importdate}</p>
             </CardContent>
       
         </CardActionArea>
         <CardActions>
-          <IconButton>
-            <DeleteIcon />
-          </IconButton>
+          <DeleteButton id={myAddress.id} />
           <Link to={`/address/${myAddress.id}`}>Details</Link>
         </CardActions>
       </Card>

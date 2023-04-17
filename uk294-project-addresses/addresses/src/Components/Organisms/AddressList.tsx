@@ -9,7 +9,7 @@ export default function AddressList(){
     const [data, setData] = useState<address[]>()
 
     useEffect(() => {
-        addressService().getAllAddresses().then((data) => setData(data))
+        addressService().getAllAddresses().then((data : address[]) => setData(data))
     }, )
 
 

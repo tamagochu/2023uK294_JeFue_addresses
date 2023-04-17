@@ -30,7 +30,9 @@ const signinService = (api: AxiosInstance = defaultAxiosInstance) => ({
         "login",
         { email , password },
       )
-      localStorage.setItem('accessToken', data.data.accessToken )
+      if(data && data.status == 200){
+        localStorage.setItem('accessToken', data.data.accessToken )
+      }
         return data;
     },
 

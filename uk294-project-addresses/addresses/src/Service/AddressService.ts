@@ -11,6 +11,15 @@ const addressService = (api: AxiosInstance = defaultAxiosInstance) => ({
     getAddressByIndex: async (id: number) =>{
         const data = await api.get(`address/${id}`)
         return data["data"]
+    },
+
+    deleteAddress: async (id: number) =>{
+        const data = await api.delete(`address/${id}`);
+        return data["data"]
+    },
+
+    postAddress: async () => {
+
     }
 });
 
