@@ -10,8 +10,10 @@ import {
   import DeleteIcon from "@mui/icons-material/Delete";
 import { Link, useNavigate } from "react-router-dom";
 
+
   
   export default function AddressCard(myAddress: address) {
+    
   //let navigate = useNavigate(); 
       
   

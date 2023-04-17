@@ -8,11 +8,10 @@ const addressService = (api: AxiosInstance = defaultAxiosInstance) => ({
         return data["data"]
     },
 
-    /*getAddressByIndex: async () =>{
-        var id = 
+    getAddressByIndex: async (id: number) =>{
         const data = await api.get(`address/${id}`)
-        return data
-    }*/
+        return data["data"]
+    }
 });
 
 export default addressService;

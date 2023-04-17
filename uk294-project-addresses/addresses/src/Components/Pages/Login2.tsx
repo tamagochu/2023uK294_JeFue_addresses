@@ -11,7 +11,7 @@ export default function Login(){
 
   return(
     <div>
-    <h1>Any place in your app!</h1>
+    <h1>Login</h1>
 
     <Formik
       initialValues={{ email: "", password: "" }}
