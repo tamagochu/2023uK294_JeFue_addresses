@@ -6,12 +6,13 @@ import OverviewPage from './Components/Pages/OverviewPage';
 import { Routes, Route } from 'react-router-dom';
 import DetailsPage from './Components/Pages/DetailsPage';
 import LoginPage from './Components/Pages/LoginPage';
+import Login2 from './Components/Pages/Login2';
 
 function App() {
   return (
    <Routes>
-    <Route path="/" element={<OverviewPage />} />
-    <Route path="/login" element={<LoginPage />} />
+    <Route path="/addresses" element={<OverviewPage />} />
+    <Route path="/login" element={<Login2 />} />
     <Route path="/address/:id" element={<DetailsPage />} />
    </Routes>
   );
