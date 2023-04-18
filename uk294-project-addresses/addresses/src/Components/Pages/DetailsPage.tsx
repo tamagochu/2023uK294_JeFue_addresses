@@ -13,7 +13,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 export default function DetailsPage() {
   let { id } = useParams();
   const [newAddress, setNewAddress] = useState<address>();
-
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   const navigate = useNavigate();
   const handleClick = () => {
@@ -25,9 +25,15 @@ export default function DetailsPage() {
         .getAddressByIndex(parseInt(id!)).then((result : address) => {
             console.log(id)
             setNewAddress(result);
-            console.log(newAddress)
+            setIsLoaded(true)
         })
     }, []);
+
+      
+    useEffect( () => {
+      console.log("use state updated, information is now here")
+      console.log(newAddress)
+    }, [newAddress])
 
     // return AddressDetailsCard(data!)
 return (
@@ -40,7 +46,7 @@ return (
       <IconButton onClick={handleClick}>
             <ArrowBackIosIcon />
           </IconButton>
-        {AddressDetails(newAddress!)}
+        {isLoaded && AddressDetails(newAddress!)}
       </CardContent>
       <CardActions>
       <DeleteButton id={newAddress?.id!}/>

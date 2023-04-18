@@ -17,7 +17,7 @@ export default function AddressList(){
         <div>
             {data?.map((address) =>{
                 return(
-                    <div>
+                    <div key={address.id}>
                         {AddressCard(address)}
                     </div>
                 )
