@@ -19,6 +19,7 @@ export default function AddressList(){
                 return(
                     <div key={address.id}>
                         {AddressCard(address)}
+                        <br />
                     </div>
                 )
             })}

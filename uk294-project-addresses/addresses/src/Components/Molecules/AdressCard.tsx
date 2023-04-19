@@ -14,18 +14,7 @@ import DeleteButton from "./DeleteButton";
 
 
   
-  export default function AddressCard(myAddress: address) {
-    
-  //let navigate = useNavigate(); 
-      
-  
-      /*const RouteChange = () =>{
-        
-          let path = `/address/${myAddress.id}`
-          navigate(path);
-          console.log("hiiiiiiiii")
-      }*/
-      
+  export default function AddressCard(myAddress: address) {  
       
     return (
       <Card variant="outlined" sx={{ display: "flex", flexDirection: "column" }}>

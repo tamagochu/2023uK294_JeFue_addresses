@@ -1,5 +1,6 @@
 import { AxiosInstance } from "axios";
 import { defaultAxiosInstance } from "./Api";
+import { address } from "../Interfaces/AddressInterface";
 
 const addressService = (api: AxiosInstance = defaultAxiosInstance) => ({
 
@@ -18,9 +19,16 @@ const addressService = (api: AxiosInstance = defaultAxiosInstance) => ({
         return data["data"]
     },
 
-    postAddress: async () => {
+    putAddress: async (myAddress : address) => {
+        const data = await api.put(`address/${myAddress.id}`, myAddress)
+        return data["data"]
+    },
 
+    postAddress: async (myAddress : address) => {
+        const data = await api.post('address', myAddress)
+        return data["data"]
     }
+
 });
 
 export default addressService;

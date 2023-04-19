@@ -1,12 +1,13 @@
 import { Card, CardContent, CardActions, Button, IconButton } from "@mui/material";
 import AddressDetails from "../Molecules/AddressDetails";
 import DeleteButton from "../Molecules/DeleteButton";
-import SendIcon from '@mui/icons-material/Send';
+
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { address } from "../../Interfaces/AddressInterface";
 import addressService from "../../Service/AddressService";
+import SaveButton from "../Molecules/SaveButton";
 
 export default function AddressDetailsCard(myAddress : address){
     
@@ -14,7 +15,7 @@ export default function AddressDetailsCard(myAddress : address){
     const handleClick = () => {
         navigate("/address", {replace: true})
     }
-
+// <SaveButton myAddress={myAddress}/>
 
     return(<Card sx={{ minWidth: 275 }}>
 
@@ -26,9 +27,7 @@ export default function AddressDetailsCard(myAddress : address){
       </CardContent>
       <CardActions>
       <DeleteButton id={myAddress?.id}/>
-        <Button variant="contained" endIcon={<SendIcon />}>
-          Save
-        </Button>
+       
       </CardActions>
     </Card>)
 }
