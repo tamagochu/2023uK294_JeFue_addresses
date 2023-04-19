@@ -50,9 +50,6 @@ return (
       </CardContent>
       <CardActions>
       <DeleteButton id={newAddress?.id!}/>
-        <Button variant="contained" endIcon={<SendIcon />}>
-          Save
-        </Button>
       </CardActions>
     </Card>
 
