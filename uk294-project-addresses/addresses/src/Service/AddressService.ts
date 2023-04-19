@@ -24,8 +24,8 @@ const addressService = (api: AxiosInstance = defaultAxiosInstance) => ({
         return data["data"]
     },
 
-    postAddress: async (myAddress : address) => {
-        const data = await api.post('address', myAddress)
+    postAddress: async (street_name : string, street_number : string, country_id : number, importdate : string, city:string) => {
+        const data = await api.post('address', {"street_name" : street_name, "street_number" : street_number, "country_id" : country_id, "importdate" : importdate, "city" : city})
         return data["data"]
     }
 

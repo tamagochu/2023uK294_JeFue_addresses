@@ -15,7 +15,6 @@ export default function AddressDetailsCard(myAddress : address){
     const handleClick = () => {
         navigate("/address", {replace: true})
     }
-// <SaveButton myAddress={myAddress}/>
 
     return(<Card sx={{ minWidth: 275 }}>
 
