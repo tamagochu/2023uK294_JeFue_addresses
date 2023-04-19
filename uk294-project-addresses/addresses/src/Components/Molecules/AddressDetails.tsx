@@ -1,21 +1,11 @@
 import {
-  Card,
   Box,
-  CardContent,
-  IconButton,
-  CardActionArea,
-  CardActions,
   Typography,
-  TextField,
   Container,
-  Button,
 } from "@mui/material";
 import { address } from "../../Interfaces/AddressInterface";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import addressService from "../../Service/AddressService";
-import { Field, Formik, useFormik, Form } from "formik";
+import { Field, Formik,  Form } from "formik";
 
 export default function AddressDetails(myAddress: address) {
 
@@ -58,19 +48,25 @@ export default function AddressDetails(myAddress: address) {
               <Typography variant="h5" component="div">
                 Address Details
               </Typography>
+              <Typography variant="body2">ID</Typography>
               <Field type="id" name="id" />
               <br />
+              <Typography variant="body2">Street Name</Typography>
               <Field type="street_name" name="street_name" />
               <br />
+              <Typography variant="body2">Street Number</Typography>
               <Field type="street_number" name="street_number" />
               <br />
+              <Typography variant="body2">City</Typography>
               <Field type="city" name="city" />
               <br />
+              <Typography variant="body2">Country ID</Typography>
               <Field type="country_id" name="country_id" />
               <br />
+              <Typography variant="body2">Import Date</Typography>
               <Field type="importdate" name="importdate" />
               <button type="submit" disabled={isSubmitting || !isValid}>
-            Submit
+            Save
           </button>
             </Form>
           )}

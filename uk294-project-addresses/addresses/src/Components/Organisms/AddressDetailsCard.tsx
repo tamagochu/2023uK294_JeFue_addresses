@@ -4,10 +4,7 @@ import DeleteButton from "../Molecules/DeleteButton";
 
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { address } from "../../Interfaces/AddressInterface";
-import addressService from "../../Service/AddressService";
-import SaveButton from "../Molecules/SaveButton";
 
 export default function AddressDetailsCard(myAddress : address){
     

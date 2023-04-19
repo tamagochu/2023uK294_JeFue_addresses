@@ -13,7 +13,7 @@ export default function OverviewPage() {
     <div>
       <Container maxWidth="sm">
       <IconButton onClick={handleClick}>
-            <AddIcon />
+            <AddIcon /> Add
           </IconButton>
         <Box sx={{ width: 400, height: 400 }}>
           <Typography variant="h2" gutterBottom>
